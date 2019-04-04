@@ -4,7 +4,7 @@
 #
 Name     : deprecated-jmespath
 Version  : 0.9.3
-Release  : 34
+Release  : 35
 URL      : http://pypi.debian.net/jmespath/jmespath-0.9.3.tar.gz
 Source0  : http://pypi.debian.net/jmespath/jmespath-0.9.3.tar.gz
 Summary  : JSON Matching Expressions
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554321648
+export SOURCE_DATE_EPOCH=1554341173
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -80,7 +80,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/jp.py
+%exclude /usr/bin/jp.py
 
 %files legacypython
 %defattr(-,root,root,-)
